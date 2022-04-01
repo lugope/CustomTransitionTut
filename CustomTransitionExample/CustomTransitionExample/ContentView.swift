@@ -8,9 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var show = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack{
+            if !show {
+                Text("Custom Transition")
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .font(.largeTitle.bold())
+            } else {
+                Text("Custom Transition")
+                    .frame(maxWidth: .infinity, alignment: .trailing)
+                    .font(.largeTitle.bold())
+            }
+        }
+        .onTapGesture {
+            withAnimation {
+                show.toggle()
+            }
+        }
     }
 }
 
