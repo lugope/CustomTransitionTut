@@ -8,22 +8,57 @@
 import SwiftUI
 
 struct ContentView: View {
+    @Namespace var namespace
     @State var show = false
     
     var body: some View {
         ZStack{
             if !show {
-                Text("Custom Transition")
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .font(.largeTitle.bold())
+                VStack(alignment: .leading, spacing: 12) {
+                    Text("Reading time: 20 mins")
+                        .font(.headline)
+                        .matchedGeometryEffect(id: "description", in: namespace)
+                    
+                    Text("Custom Transition")
+                        .matchedGeometryEffect(id: "title", in: namespace)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .font(.largeTitle.bold())
+                }
+                .padding(20)
+                .background(
+                    Color(UIColor.systemGray4).matchedGeometryEffect(id: "background", in: namespace)
+                )
+                .mask(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .matchedGeometryEffect(id: "mask", in: namespace)
+                )
+                .padding(20)
+                
             } else {
-                Text("Custom Transition")
-                    .frame(maxWidth: .infinity, alignment: .trailing)
-                    .font(.largeTitle.bold())
+                VStack(alignment: .center, spacing: 12) {
+                    Text("Custom Transition")
+                        .matchedGeometryEffect(id: "title", in: namespace)
+                        .font(.largeTitle.bold())
+                    
+                    Text("Reading time: 20 mins")
+                        .font(.headline)
+                        .matchedGeometryEffect(id: "description", in: namespace)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                    
+                    Spacer()
+                }
+                .padding(20)
+                .background(
+                    Color(UIColor.systemGray5).matchedGeometryEffect(id: "background", in: namespace)
+                )
+                .mask(
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .matchedGeometryEffect(id: "mask", in: namespace)
+                )
             }
         }
         .onTapGesture {
-            withAnimation {
+            withAnimation (.spring(response: 0.6, dampingFraction: 0.8)){
                 show.toggle()
             }
         }
