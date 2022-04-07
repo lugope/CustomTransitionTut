@@ -11,6 +11,7 @@
 		76DE168027F72BFF0007DD55 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE167F27F72BFF0007DD55 /* ContentView.swift */; };
 		76DE168227F72C010007DD55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DE168127F72C010007DD55 /* Assets.xcassets */; };
 		76DE168527F72C010007DD55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76DE168427F72C010007DD55 /* Preview Assets.xcassets */; };
+		76DE168C27FD50BF0007DD55 /* ArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76DE168B27FD50BF0007DD55 /* ArticleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		76DE167F27F72BFF0007DD55 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		76DE168127F72C010007DD55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76DE168427F72C010007DD55 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		76DE168B27FD50BF0007DD55 /* ArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				76DE167D27F72BFF0007DD55 /* CustomTransitionExampleApp.swift */,
 				76DE167F27F72BFF0007DD55 /* ContentView.swift */,
+				76DE168B27FD50BF0007DD55 /* ArticleView.swift */,
 				76DE168127F72C010007DD55 /* Assets.xcassets */,
 				76DE168327F72C010007DD55 /* Preview Content */,
 			);
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76DE168027F72BFF0007DD55 /* ContentView.swift in Sources */,
+				76DE168C27FD50BF0007DD55 /* ArticleView.swift in Sources */,
 				76DE167E27F72BFF0007DD55 /* CustomTransitionExampleApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
